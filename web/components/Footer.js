@@ -12,6 +12,7 @@ export default function Footer() {
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/kingsbalfx',
     linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/company/kingsbal',
     youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || 'https://youtube.com/@kingsbalfx',
+    telegram: process.env.NEXT_PUBLIC_TELEGRAM_URL || 'https://t.me/kingsbal',
   };
 
   return (
@@ -76,6 +77,9 @@ export default function Footer() {
               </a>
               <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.12C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.38.58A3 3 0 0 0 .5 6.2A31.04 31.04 0 0 0 0 12a31.04 31.04 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.12C4.4 20.5 12 20.5 12 20.5s7.6 0 9.38-.58A3 3 0 0 0 23.5 17.8A31.04 31.04 0 0 0 24 12a31.04 31.04 0 0 0-.5-5.8zM9.75 15.02v-6.04L15.5 12z"/></svg>
+              </a>
+              <a href={socialLinks.telegram} target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#26A5E4" xmlns="http://www.w3.org/2000/svg"><path d="M22.5 3.2 2.9 10.8c-1 .4-.9 1.8.2 2.1l4.7 1.5 1.8 5.8c.2.7 1.1.9 1.6.4l2.6-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6l3.5-16.2c.2-.8-.6-1.5-1.2-1.2zM9.6 13.9l8.9-6.9-6.7 8.2-.3 3.1-1.8-5.7z"/></svg>
               </a>
             </div>
           </div>

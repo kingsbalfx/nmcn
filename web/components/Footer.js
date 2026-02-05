@@ -1,0 +1,106 @@
+import React from 'react';
+import Link from 'next/link';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
+  // Social media handles from environment variables
+  const socialLinks = {
+    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://wa.me/2347000000000',
+    twitter: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://twitter.com/kingsbalfx',
+    facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || 'https://facebook.com/kingsbalfx',
+    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/kingsbalfx',
+    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/company/kingsbal',
+    youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || 'https://youtube.com/@kingsbalfx',
+  };
+
+  return (
+    <footer style={{
+      background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+      color: '#e2e8f0',
+      paddingTop: '48px',
+      paddingBottom: '24px',
+      marginTop: '80px',
+      borderTop: '2px solid rgba(0, 102, 255, 0.2)',
+    }}>
+      <div className="container">
+        <div className="grid grid-3" style={{ marginBottom: '40px' }}>
+          {/* Brand */}
+          <div>
+            <h4 style={{ color: '#fff', marginBottom: '16px' }}>Kingsbal</h4>
+            <p style={{ color: '#cbd5e1', marginBottom: '16px' }}>
+              Digital healthcare bridge for nursing & midwifery excellence.
+            </p>
+            <p style={{ color: '#64748b', fontSize: '12px' }}>
+              © {currentYear} Kingsbal. All rights reserved.
+            </p>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h5 style={{ color: '#fff', marginBottom: '16px', fontSize: '14px', fontWeight: '600' }}>Quick Links</h5>
+            <ul style={{ listStyle: 'none' }}>
+              <li style={{ marginBottom: '8px' }}>
+                <Link href="/dashboard" style={{ color: '#cbd5e1' }}>Dashboard</Link>
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                <Link href="/subscribe" style={{ color: '#cbd5e1' }}>Subscribe</Link>
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                <Link href="/admin" style={{ color: '#cbd5e1' }}>Admin Panel</Link>
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                <Link href="/contact" style={{ color: '#cbd5e1' }}>Contact Us</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h5 style={{ color: '#fff', marginBottom: '16px', fontSize: '14px', fontWeight: '600' }}>Follow Us</h5>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.88 11.88 0 0 0 12 0C5.373 0 .02 5.353.02 12c0 2.112.553 4.176 1.6 6.01L0 24l6.15-1.58A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12 0-1.96-.5-3.81-1.48-5.52z"/></svg>
+              </a>
+              <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 7.77v.57A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+              <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.07C22 6.54 17.52 2 12 2S2 6.54 2 12.07c0 4.99 3.66 9.12 8.44 9.93v-7.03H8.07v-2.9h2.37V9.41c0-2.34 1.39-3.63 3.52-3.63.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42v1.71h2.52l-.4 2.9h-2.12v7.03C18.34 21.19 22 17.06 22 12.07z"/></svg>
+              </a>
+              <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#E4405F" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zM18.4 6.3a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/></svg>
+              </a>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5a2.5 2.5 0 1 1 .02 0zM3 8.98h4v12H3zM8.5 8.98h3.84v1.63h.05c.54-1 1.86-2.07 3.83-2.07 4.1 0 4.86 2.7 4.86 6.2v7.24h-4v-6.41c0-1.53-.03-3.5-2.13-3.5-2.13 0-2.46 1.66-2.46 3.38v6.53h-4z"/></svg>
+              </a>
+              <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" style={{ display: 'inline-flex', opacity: 0.8, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.12C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.38.58A3 3 0 0 0 .5 6.2A31.04 31.04 0 0 0 0 12a31.04 31.04 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.12C4.4 20.5 12 20.5 12 20.5s7.6 0 9.38-.58A3 3 0 0 0 23.5 17.8A31.04 31.04 0 0 0 24 12a31.04 31.04 0 0 0-.5-5.8zM9.75 15.02v-6.04L15.5 12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div style={{ 
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+          paddingTop: '24px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px',
+        }}>
+          <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>
+            Made with ❤️ for healthcare professionals
+          </p>
+          <div style={{ display: 'flex', gap: '24px', fontSize: '14px' }}>
+            <Link href="/terms" style={{ color: '#cbd5e1' }}>Terms of Service</Link>
+            <Link href="/privacy" style={{ color: '#cbd5e1' }}>Privacy Policy</Link>
+            <Link href="/contact" style={{ color: '#cbd5e1' }}>Contact</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

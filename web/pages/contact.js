@@ -47,6 +47,7 @@ export default function Contact() {
   const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_URL || 'https://facebook.com/kingsbalfx';
   const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/kingsbalfx';
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/company/kingsbalfx';
+  const telegramUrl = process.env.NEXT_PUBLIC_TELEGRAM_URL || 'https://t.me/kingsbal';
 
   return (
     <Layout>
@@ -90,6 +91,9 @@ export default function Contact() {
                 </a>
                 <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" title="LinkedIn" style={{ display: 'inline-flex' }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5a2.5 2.5 0 1 1 .02 0zM3 8.98h4v12H3zM8.5 8.98h3.84v1.63h.05c.54-1 1.86-2.07 3.83-2.07 4.1 0 4.86 2.7 4.86 6.2v7.24h-4v-6.41c0-1.53-.03-3.5-2.13-3.5-2.13 0-2.46 1.66-2.46 3.38v6.53h-4z"/></svg>
+                </a>
+                <a href={telegramUrl} target="_blank" rel="noopener noreferrer" title="Telegram" style={{ display: 'inline-flex' }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="#26A5E4" xmlns="http://www.w3.org/2000/svg"><path d="M22.5 3.2 2.9 10.8c-1 .4-.9 1.8.2 2.1l4.7 1.5 1.8 5.8c.2.7 1.1.9 1.6.4l2.6-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6l3.5-16.2c.2-.8-.6-1.5-1.2-1.2zM9.6 13.9l8.9-6.9-6.7 8.2-.3 3.1-1.8-5.7z"/></svg>
                 </a>
               </div>
             </div>

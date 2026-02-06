@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -33,7 +32,7 @@ export default function Footer() {
               Digital healthcare bridge for nursing & midwifery excellence.
             </p>
             <p style={{ color: '#64748b', fontSize: '12px' }}>
-              © {currentYear} Kingsbal. All rights reserved.
+              {currentYear} Kingsbal. All rights reserved.
             </p>
           </div>
 
@@ -96,7 +95,7 @@ export default function Footer() {
           gap: '16px',
         }}>
           <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>
-            Made with ❤️ for healthcare professionals
+            Made with care for healthcare professionals
           </p>
           <div style={{ display: 'flex', gap: '24px', fontSize: '14px' }}>
             <Link href="/terms" style={{ color: '#cbd5e1' }}>Terms of Service</Link>

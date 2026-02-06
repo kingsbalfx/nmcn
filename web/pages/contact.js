@@ -25,17 +25,22 @@ export default function Contact() {
     
     try {
       // Send to backend contact endpoint (optional)
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact`, formData, {
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || '';
+      if (!apiBaseUrl) {
+        throw new Error('Missing NEXT_PUBLIC_API_URL');
+      }
+
+      await axios.post(`${apiBaseUrl}/contact`, formData, {
         withCredentials: true
       });
-      
-      setMessage('✓ Message sent successfully! We\'ll get back to you soon.');
+
+      setMessage('Message sent successfully! We will get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
       
       setTimeout(() => setMessage(''), 5000);
     } catch (error) {
       console.error('Error sending message:', error);
-      setMessage('✗ Failed to send message. Please try WhatsApp instead.');
+      setMessage('Failed to send message. Please try WhatsApp instead.');
       setTimeout(() => setMessage(''), 5000);
     } finally {
       setLoading(false);
@@ -72,7 +77,7 @@ export default function Contact() {
                 className="btn btn-primary"
                 style={{ display: 'inline-block' }}
               >
-                💬 Message on WhatsApp
+                Message on WhatsApp
               </a>
             </div>
 
@@ -122,8 +127,8 @@ export default function Contact() {
                 padding: '12px',
                 marginBottom: '20px',
                 borderRadius: '8px',
-                backgroundColor: message.includes('✓') ? '#d1fae5' : '#fee2e2',
-                color: message.includes('✓') ? '#065f46' : '#991b1b',
+                backgroundColor: message.startsWith('Message sent') ? '#d1fae5' : '#fee2e2',
+                color: message.startsWith('Message sent') ? '#065f46' : '#991b1b',
                 fontSize: '14px'
               }}>
                 {message}

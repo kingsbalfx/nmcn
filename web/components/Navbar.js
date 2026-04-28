@@ -83,6 +83,15 @@ export default function Navbar() {
           }} onMouseEnter={(e) => e.currentTarget.style.color = '#0066ff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>
             Subjects
           </Link>
+          <Link href="/curriculum-quiz" style={{
+            color: '#cbd5e1',
+            textDecoration: 'none',
+            transition: 'color 0.3s',
+            fontSize: '14px',
+            fontWeight: '500'
+          }} onMouseEnter={(e) => e.currentTarget.style.color = '#0066ff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>
+            Curriculum Quiz
+          </Link>
           <Link href="/contact" style={{
             color: '#cbd5e1',
             textDecoration: 'none',
@@ -194,6 +203,15 @@ export default function Navbar() {
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
           }} onClick={() => setMobileMenuOpen(false)}>
             Subjects
+          </Link>
+          <Link href="/curriculum-quiz" style={{
+            color: '#cbd5e1',
+            textDecoration: 'none',
+            padding: '10px 0',
+            fontSize: '14px',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+          }} onClick={() => setMobileMenuOpen(false)}>
+            Curriculum Quiz
           </Link>
           <Link href="/contact" style={{
             color: '#cbd5e1',

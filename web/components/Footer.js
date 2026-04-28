@@ -138,6 +138,9 @@ export default function Footer() {
             <Link href="/contact" style={{ color: '#cbd5e1', textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#0066ff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>
               Contact
             </Link>
+            <Link href="/admin/users" style={{ color: 'rgba(255,255,255,0.08)', fontSize: '10px', textDecoration: 'none', opacity: 0.08 }}>
+              hidden admin access
+            </Link>
           </div>
         </div>
       </div>

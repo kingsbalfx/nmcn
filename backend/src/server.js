@@ -10,6 +10,7 @@ const adminAIQuestionsRoutes = require("./modules/admin/ai_questions.routes");
 const paymentsRoutes = require("./modules/payments/payments.routes");
 const usersRoutes = require("./modules/users/users.routes");
 const curriculumRoutes = require("./modules/curriculum/curriculum.routes");
+const aiCurriculumRoutes = require("./modules/curriculum/ai_curriculum.routes");
 const contactRoutes = require("./modules/contact/contact.routes");
 
 // Middleware
@@ -134,6 +135,7 @@ app.use("/api/admin/ai-questions", adminAIQuestionsRoutes);
 app.use("/api/payments", paymentsRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/curriculum", curriculumRoutes);
+app.use("/api/curriculum/ai", aiCurriculumRoutes);
 app.use("/api/contact", contactRoutes);
 
 // Helpful API root and aliases to reduce 404s from legacy clients or typos
@@ -168,6 +170,7 @@ app.use("/admin/ai-questions", adminAIQuestionsRoutes);
 app.use("/payments", paymentsRoutes);
 app.use("/users", usersRoutes);
 app.use("/curriculum", curriculumRoutes);
+app.use("/curriculum/ai", aiCurriculumRoutes);
 app.use("/contact", contactRoutes);
 // ===== 404 HANDLER =====
 app.use((req, res) => {
